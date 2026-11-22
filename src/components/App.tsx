@@ -5,7 +5,7 @@ import reactLogo from '@/assets/images/react.svg';
 
 import styles from './App.module.scss';
 
-const TEMPLATE_VERSION = '1.3.8';
+const TEMPLATE_VERSION = '1.0.0';
 const REACT_VERSION = '19.3.1';
 const TS_VERSION = '6.0.3';
 const VITE_VERSION = '8.3.8';
