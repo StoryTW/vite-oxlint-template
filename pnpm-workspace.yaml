@@ -5,4 +5,5 @@ allowBuilds:
   unrs-resolver: true
 minimumReleaseAgeExclude:
   - '@storytw/eslint-config@2.2.2'
+  - '@storytw/oxlint-config@1.2.1'
 

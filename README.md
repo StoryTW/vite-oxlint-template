@@ -1,8 +1,8 @@
 <h1 align="center">
-  Vite Template by Story 🚀
+  Vite Oxlint Template by Story 🚀
 </h1>
 
-<h2 align="center">React + TypeScript + Vite + SASS + ESLint</h2>
+<h2 align="center">React + TypeScript + Vite + SASS + Oxlint</h2>
 
 ## 📌 Introduction
 
@@ -13,7 +13,7 @@ A starter [Vite](https://vitejs.dev/) template having:
 - [SASS](https://sass-lang.com/)
 - [modern-normalize](https://www.npmjs.com/package/modern-normalize)
 - [Vite SVGR loader](https://www.npmjs.com/package/vite-plugin-svgr)
-- My custom [ESLint](https://eslint.org/) config [@storytw/eslint-config](https://www.npmjs.com/package/@storytw/eslint-config) installed with [@stylistic](https://eslint.style/rules)
+- My custom [Oxlint](https://oxc.rs/docs/guide/usage/linter.html) config [@storytw/oxlint-config](https://www.npmjs.com/package/@storytw/oxlint-config)
 
 ## 📦 Using this template
 
@@ -35,7 +35,7 @@ npm run dev
 ### ✅ Option 2 — GitHub CLI
 
 ```sh
-gh repo create my-app --template StoryTW/vite-template-by-story
+gh repo create my-app --template StoryTW/vite-oxlint-template
 cd my-app
 npm install
 npm run dev
@@ -44,7 +44,7 @@ npm run dev
 ### ✅ Option 3 — degit
 
 ```sh
-npx degit StoryTW/vite-template-by-story my-app
+npx degit StoryTW/vite-oxlint-template my-app
 cd my-app
 npm install
 npm run dev

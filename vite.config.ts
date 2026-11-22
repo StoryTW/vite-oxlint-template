@@ -2,9 +2,11 @@ import path from 'node:path';
 
 import react from '@vitejs/plugin-react';
 import { visualizer } from 'rollup-plugin-visualizer';
-import { defineConfig, type UserConfig } from 'vite';
+import { defineConfig } from 'vite';
 import checker from 'vite-plugin-checker';
 import svgr from 'vite-plugin-svgr';
+
+import type { UserConfig } from 'vite';
 
 export default defineConfig(({ mode, command }) => {
   const isDev = command === 'serve';
@@ -14,18 +16,18 @@ export default defineConfig(({ mode, command }) => {
     plugins: [
       react(),
       svgr(),
-      isDev && checker({
-        overlay: {
-          initialIsOpen: false,
-        },
-        typescript: {
-          tsconfigPath: './tsconfig.app.json',
-        },
-        eslint: {
-          lintCommand: 'eslint ./src',
-          useFlatConfig: true,
-        },
-      }),
+      isDev
+        && checker({
+          overlay: {
+            initialIsOpen: false,
+          },
+          typescript: {
+            tsconfigPath: './tsconfig.app.json',
+          },
+          oxlint: {
+            lintCommand: 'oxlint .',
+          },
+        }),
     ].filter(Boolean),
 
     resolve: {
@@ -49,13 +51,14 @@ export default defineConfig(({ mode, command }) => {
     build: {
       rolldownOptions: {
         plugins: [
-          isVisualiser && visualizer({
-            filename: 'dist/stats.html',
-            template: 'treemap',
-            open: true,
-            gzipSize: true,
-            brotliSize: true,
-          }),
+          isVisualiser
+            && visualizer({
+              filename: 'dist/stats.html',
+              template: 'treemap',
+              open: true,
+              gzipSize: true,
+              brotliSize: true,
+            }),
         ].filter(Boolean),
 
         output: {
