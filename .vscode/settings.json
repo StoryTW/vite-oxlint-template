@@ -4,7 +4,7 @@
   "oxc.enable.oxfmt": true,
   "oxc.lint.run": "onType",
   "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": "always"
+    "source.fixAll.oxc": "always"
   },
   "[typescriptreact]": {
     "editor.defaultFormatter": "oxc.oxc-vscode"
